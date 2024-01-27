@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>XITTER</h1>
+    <div>
+      <form action="/tweet/post" method="post">
+        <textarea id="story" name="tweet" rows="5" cols="33" required></textarea>
+        <input type="submit" name="" id="" />
+      </form>
+    </div>
+    <div>
+
+      <% if(data && !(data.length===0)){ %>
+        <h1>Your tweets</h1>
+        <% data.forEach((item)=>{  %>
+      <p><%= item.tweet %></p>
+      <% }) %>
+     
+<% } %>
+    </div>
+</html>
